@@ -1,0 +1,23 @@
+﻿<Window x:Class="DictionaryWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DictionaryWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="528.536" Width="764.724">
+    <Grid Margin="0,0,2,0">
+        <TextBox x:Name="Search_txt" HorizontalAlignment="Left" Height="22" Margin="226,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <TextBlock x:Name="Word_Block" HorizontalAlignment="Left" Height="18" Margin="131,278,0,0" TextWrapping="Wrap" Text="Word" VerticalAlignment="Top" Width="92" FontWeight="Bold"/>
+        <TextBlock x:Name="WordDatabase" HorizontalAlignment="Left" Height="18" Margin="228,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182"/>
+        <TextBlock x:Name="MeaningDatabase" HorizontalAlignment="Left" Height="179" Margin="228,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397"/>
+        <TextBlock x:Name="Meaning_Block" HorizontalAlignment="Left" Height="18" Margin="131,302,0,0" TextWrapping="Wrap" Text="Meaning" VerticalAlignment="Top" Width="92" FontWeight="Bold"/>
+        <Button x:Name="Search_Button" Content="Search" HorizontalAlignment="Left" Margin="486,19,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Search_Button_Click" FontWeight="Bold" IsDefault="{Binding ElementName=Search_txt, Path=IsKeyboardFocused}"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="200" Margin="226,41,0,0" VerticalAlignment="Top" Width="214" SelectionChanged="listBox_SelectionChanged"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="82,19,0,0" TextWrapping="Wrap" Text="Type the word" VerticalAlignment="Top" Height="22" Width="122" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="455,280,0,0" TextWrapping="Wrap" Text="WordType" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="wordTypeBlock" HorizontalAlignment="Left" Margin="559,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <Button x:Name="speech" FontFamily="Segoe MDL2 Assets" Content="&#xE15D;" HorizontalAlignment="Left" Margin="486,62,0,0" VerticalAlignment="Top" Width="35" Height="29" Click="speech_Click"/>
+
+    </Grid>
+</Window>
